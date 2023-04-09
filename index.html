@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "index.js" defer></script>
+    <title>StonePaper</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class = "box">
+            <header>
+                <h1>Rock Paper or Scissors?</h1>
+            </header>
+            <div class = "scoreboard">
+                <div class="player">
+                    <div class="player_name">
+                        <img src = "img/Human.png" alt = "Human" width = 128px height = 128px>
+                        <p>You</p>
+                    </div>
+                    <div id ="score-el" class = "score">
+
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="player_name">
+                        <img src = "img/bot.png" alt = "Human" width = 128px height = 128px>
+                        <p>Bot</p>
+                    </div>
+                    <div id = "bot-score-el" class="score">
+                        
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class = "buttons">
+                <button onclick = "rock()">
+                    <div class="rock">
+                        <img src = "img/rock.png" alt = "rock">
+                    </div>
+                </button>
+                
+                <button onclick = "paper()"><div class="paper"><img src="img/paper.png" alt="paper"></div></button>
+                <button onclick = "scissor()"><div class="scissor"><img src="img/scissor.png" alt="scissor"></div></button>
+                <button onclick = "End()" class = "End">End</button>               
+                <div class = "result"><h2 id = "result-el"></h2></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

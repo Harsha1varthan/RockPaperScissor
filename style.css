@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --MAIN_COLOR: #1c3fbbff;
+    --Font_COLOR: #83a4fd;
+    --FONT-FAMILY: "Press Start 2P", cursive;
+    --LL-FONT-SIZE: 2rem;
+    --L-FONT-SIZE: 4rem;
+    --M-FONT-SIZE: 2rem;
+    --S-FONT-SIZE: 1rem;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--MAIN_COLOR);
+    color: var(--Font_COLOR);
+    font-family: var(--FONT-FAMILY);
+}
+
+.box{
+    display: grid;
+    grid-template-rows: 0.2fr 1.5fr 1fr;
+}
+.box >*{
+    border: 2px solid #83a4fd;
+}
+.scoreboard >*{
+    border: 2px solid #83a4fd;
+}
+header{
+    text-align: center;
+    padding: 2rem;
+    font-size: var(--LL-FONT-SIZE);
+}
+.scoreboard{
+    position: relative;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.player_name{
+    
+    display: flex;
+    font-size: var(--LL-FONT-SIZE);
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.score{
+    font-size: 7rem;
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    padding: 5rem 3rem;
+}
+.buttons{ 
+    position: relative;
+    display: flex;
+    padding: 3em;
+    
+}
+
+button{
+    width: 15%;
+    aspect-ratio: 1/1;
+    background-color: var(--Font_COLOR);
+    box-shadow: 7px 4px #000;
+}
+.buttons img{
+    width: 50%;
+}
+.End{
+    position: absolute;
+    width: 14%;
+    aspect-ratio: 2/0.7;
+    font-size: var(--M-FONT-SIZE);
+    color: var(--MAIN_COLOR);
+    font-weight: bold;
+    right: 3rem;
+    bottom: 3rem;
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--M-FONT-SIZE);
+    margin-left: 5%;
+}
+
+@media screen and (max-width: 768px) {
+    header{
+        display: none;
+    }
+    .score{
+        font-size: 4rem;
+    }
+    
+    .scoreboard{
+        grid-template-columns: none;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .buttons{
+        position: relative;
+        flex-flow: column nowrap;
+        padding: 1rem;
+        
+    }
+    button{
+        width: 70%;
+    }
+    .End{
+        position: static;
+        width: fit-content;
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+}
